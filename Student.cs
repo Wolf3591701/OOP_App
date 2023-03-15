@@ -6,23 +6,36 @@ using System.Threading.Tasks;
 
 namespace OOP_App
 {
-    //Here we can only read or write data to this class
-    internal class Student : Person
+    class Student
     {
-        //Private field (backing field) to hold any data assigned Name property.
-        private string _name;
+        private string name;
+        private int age;
+        private string grade;
 
-        private Student() 
+        public Student(string name, int age, string grade)
         {
-            _name = "";
+            Name = name;
+            Age = age;
+            Grade = grade;
         }
 
-        //this is the Name property
         public string Name
         {
-            get { return _name; }  //use Get accessor to read data from the class
-            set { _name = value; } //Set accessor value is set automatically 
+            get { return name; }
+            set { name = value; }
         }
 
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public string Grade
+        {
+            get { return grade; }
+            set { grade = value; }
+        }
     }
 }
+
